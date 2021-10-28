@@ -1,0 +1,156 @@
+.header {
+  width: 90vw;
+  margin: auto;
+}
+
+.logo {
+  margin-bottom: 3rem;
+
+  @media only screen and (max-width: $bp-small) {
+    text-align: center;
+  }
+
+  &__img {
+    width: 10rem;
+    height: auto;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $bp-small) {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 50%;
+    @media only screen and (max-width: $bp-small) {
+      max-width: 90%;
+    }
+  }
+
+  &__content {
+    max-width: 45%;
+    margin-top: 2.5rem;
+    color: rgba(#ffffff, 0.9);
+  }
+
+  &__heading {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 1.4;
+    max-width: 70%;
+  }
+
+  &__paragraph {
+    max-width: 90%;
+    color: rgba(#ffffff, 0.75);
+    margin: 1.75rem 0 1.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 1rem 0 1.5rem;
+      padding: 0 0.5rem;
+    }
+  }
+
+  &__heading,
+  &__content,
+  &__paragraph {
+    @media only screen and (max-width: $bp-small) {
+      max-width: 100%;
+    }
+  }
+
+  &__btn {
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    color: $violet;
+    background-color: rgba(#ffffff, 0.9);
+    padding: 0.75rem 3.25rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: ease 0.15s;
+
+    &:hover {
+      box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      background-color: $soft-magenta;
+      color: rgba(#ffffff, 0.9);
+      transform: translateY(-1px);
+      box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.2);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0;
+
+  @media only screen and (max-width: $bp-small) {
+    justify-content: center;
+    margin: 4rem 0 1rem;
+  }
+
+  &__icon {
+    font-size: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: rgba(#ffffff, 0.9);
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: ease 0.15s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      color: $soft-magenta;
+      border-color: currentColor;
+      // transform: scale(1.2);
+      animation-name: boing;
+      animation-duration: 0.75s;
+    }
+  }
+}
+
+.uil-twitter {
+  margin: 0 0.75rem;
+}
+
+@keyframes boing {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.4);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: $soft-magenta;
+}
+.attribution a {
+  color: hsl(230, 23%, 90%);
+}
